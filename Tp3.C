@@ -25,7 +25,7 @@ int IsEmpty(Node* head) {
 
 
 Node* addBeginning(Node* head, Product P) {
-    Node* new = (Node*) malloc(sizeof(Node));
+    Node* new =  malloc(sizeof(Node));
     new->Prod = P;
 
     if (head == NULL) {
@@ -45,7 +45,7 @@ Node* addBeginning(Node* head, Product P) {
 
 
 Node* addEnd(Node* head, Product P) {
-    Node* new = (Node*) malloc(sizeof(Node));
+    Node* new = malloc(sizeof(Node));
     new->Prod = P;
 
     if (head == NULL) {
@@ -84,13 +84,13 @@ int main() {
 
     
     P.ID = 1;
-    P.Name[0]="A";
+    strcpy(P.Name,"A");
     P.Price = 120;
     head = addBeginning(head, P);
 
     
     P.ID = 2;
-    P.Name[0]="j";
+    strcpy(P.Name,"j");
     P.Price = 50;
     head = addEnd(head, P);
 
